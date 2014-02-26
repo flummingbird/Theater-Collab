@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Water/Player</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+		<script src="jquery.js" type="text/javascript"></script>
+		<script src="nexusUI.js" type="text/javascript"></script>
+	</head>
+	<body>
+	
+		<style>
+		
+			body {
+				background-color:#0033CC;
+			}
+			p {
+				color:#2cf;
+			}
+			.mess {
+				width:100px;
+				height:20px;
+			}
+			
+			.sideways {
+								
+				transform:rotate(90deg);
+				-ms-transform:rotate(90deg); /* IE 9 */
+				-webkit-transform:rotate(90deg); /* Safari and Chrome */
+				display:inline-block;
+			}
+		
+		</style>
+		
+		<script>
+		
+			nx.onload = function() {
+				nx.colorize("#2cf");
+				nx.colorize("fill", "#999");
+				nx.colorize("black", "#000");
+				nx.colorize("white", "#113");
+				
+				nx.setTransmissionProtocol("ajax");
+				nx.setTransmitCommand("nexusOSCRelay.php");
+			}
+			
+		</script>
+		
+		<div>
+			<div style="float:left">
+				<div style="float:left">
+					<canvas nx="toggle" id="toggle1"></canvas>
+					<canvas nx="slider" label="Delay Size" id="fader1" style="width:40px;height:200px;"></canvas>
+					<canvas nx="slider" label="Gain" id="fader2" style="width:40px;height:200px;"></canvas>
+					<canvas nx="slider" label="Feedback%" id="fader3" style="width:40px;height:200px;"></canvas>
+				</div>
+				<div style="float:left;padding:20px;">
+					<canvas nx="message" label="lowpass" class="mess" id="push1"></canvas><br>
+					<canvas nx="message" label="highpass" class="mess" id="push2"></canvas><br>
+					<canvas nx="message" label="lowshelf" class="mess" id="push3"></canvas><br>
+					<canvas nx="message" label="highshelf" class="mess" id="push4"></canvas><br>
+					<canvas nx="message" label="resonant" class="mess" id="push5"></canvas><br>
+					<canvas nx="message" label="peaknotch" class="mess" id="push6"></canvas><br>
+					<canvas nx="message" label="bandpass" class="mess" id="push7"></canvas><br>
+					<canvas nx="message" label="bandstop" class="mess" id="push8"></canvas><br>
+			</div>		
+				<div style="clear:both">
+					<canvas nx="position" id="xy1" style="width:310px;height:150px;"></canvas>
+					<canvas nx="slider" id="fader4" style="width:40px;height:150px;"></canvas><br>
+				</div>
+					
+<br>
+</br>					
+					<canvas nx="message" label="pour1" class="mess" id="push9"></canvas>
+					<canvas nx="message" label="pour2" class="mess" id="push10"></canvas>
+					<canvas nx="message" label="sprinlker" class="mess" id="push11"></canvas>
+					<canvas nx="message" label="bath1" class="mess" id="push12"></canvas>
+					<canvas nx="message" label="bath2" class="mess" id="push13"></canvas>
+					<canvas nx="message" label="wave1" class="mess" id="push14"></canvas><br>
+					<canvas nx="message" label="wave2" class="mess" id="push15"></canvas>
+					<canvas nx="message" label="waterfall" class="mess" id="push16"></canvas>
+					<canvas nx="message" label="thunder1" class="mess" id="push17"></canvas>
+					<canvas nx="message" label="thunder2" class="mess" id="push18"></canvas>
+					<canvas nx="message" label="thunder3" class="mess" id="push19"></canvas>
+					<canvas nx="message" label="rain" class="mess" id="push20"></canvas>
+<br>
+</br>
+					
+				</div>
+				
+			</div>
+			<div style="position:absolute;left:420px;top:70px;">
+				<div>
+					<canvas nx="toggle" id="toggle2"></canvas>
+					<canvas nx="slider" label="Delay Size" id="fader5" style="width:40px;height:200px;"></canvas>
+					<canvas nx="slider" label="Gain" id="fader6" style="width:40px;height:200px;"></canvas>
+					<canvas nx="slider" id="fader7" style="width:40px;height:200px;"></canvas>
+				</div>
+				<div>
+					<canvas nx="dial" id="dial1"></canvas>
+					<canvas nx="dial" id="dial2"></canvas>
+					<canvas nx="dial" id="dial3"></canvas>
+				</div>
+			</div>
+		</div>
+		<br>
+
+			<div>
+			<canvas nx="position" id="xy3" style="width:600px;height:50px;"></canvas>
+			<canvas nx="toggle" id="toggle5"></canvas>
+			</div>
+		</div>
+	</body>
+</html>
